@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="Filter" id="iAB-nH-pYC" customClass="FilterSlider" customModule="Reactive" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="183"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KS0-58-fmQ">
+                    <rect key="frame" x="8" y="31" width="359" height="31"/>
+                    <connections>
+                        <action selector="changeSliderValue:" destination="iAB-nH-pYC" eventType="valueChanged" id="WUr-aW-ucs"/>
+                    </connections>
+                </slider>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Exz-4H-VKV">
+                    <rect key="frame" x="10" y="0.0" width="355" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.81960784310000001" green="0.83921568629999999" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="KS0-58-fmQ" firstAttribute="leading" secondItem="JXw-J5-R7k" secondAttribute="leading" constant="10" id="2QN-bL-MjG"/>
+                <constraint firstItem="Exz-4H-VKV" firstAttribute="top" secondItem="JXw-J5-R7k" secondAttribute="top" id="Okt-25-SWg"/>
+                <constraint firstItem="Exz-4H-VKV" firstAttribute="leading" secondItem="JXw-J5-R7k" secondAttribute="leading" constant="10" id="QMM-op-jlO"/>
+                <constraint firstItem="KS0-58-fmQ" firstAttribute="top" secondItem="Exz-4H-VKV" secondAttribute="bottom" constant="10" id="R1w-ku-0hC"/>
+                <constraint firstItem="JXw-J5-R7k" firstAttribute="trailing" secondItem="Exz-4H-VKV" secondAttribute="trailing" constant="10" id="c7m-Me-XRb"/>
+                <constraint firstItem="JXw-J5-R7k" firstAttribute="trailing" secondItem="KS0-58-fmQ" secondAttribute="trailing" constant="10" id="yjT-u5-fao"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="JXw-J5-R7k"/>
+            <connections>
+                <outlet property="slider" destination="KS0-58-fmQ" id="lur-Sx-oD7"/>
+                <outlet property="titleLabel" destination="Exz-4H-VKV" id="FSN-KO-K5q"/>
+            </connections>
+            <point key="canvasLocation" x="11.5" y="-485.5"/>
+        </view>
+    </objects>
+</document>
